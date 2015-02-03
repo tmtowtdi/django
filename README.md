@@ -21,28 +21,28 @@ The following paths assume you used 'mysite' as the site name.
   - Timezone, database setup, etc.
     - Yes, `mysite/mysite/`.
   - Contains a list of other Django applications that will be included in this one 
-    (INSTALLED_APPS).  To initialize those apps, you'll need to use manage.py
+    (`INSTALLED_APPS`).  To initialize those apps, you'll need to use manage.py
 - mysite/manage.py
   - Gets created automatically when you use django-admin.py to create a new project.
-  - $ python manage.py migrate
+  - `$ python manage.py migrate`
     - Initializes the apps listed in settings.py, so you may want to edit that first 
       before running this.
     - Only runs migrations that haven't been run yet.
-  - $ python manage.py runserver
+  - `$ python manage.py runserver`
     - start the development server
     - Defaults to port 8000.  If you want, change with $ python manage.py runserver 8080 
       (or whatever)
     - Autodetects and reloads itself on changes in existing files.
       - Does _not_ detect new files; for that you need to do a manual restart.
-  - $ python manage.py startapp <APPNAME>
+  - `$ python manage.py startapp <APPNAME>`
     - Creates an app under your project
     - After your app has been set up, add its name to your site's settings.py under 
-      INSTALLED_APPS.
-  - $ python manage.py makemigrations <APPNAME>
+      `INSTALLED_APPS`.
+  - `$ python manage.py makemigrations <APPNAME>`
     - Uses <APPNAME>'s models to generate migration scripts
-  - $ python manage.py sqlmigrate <APPNAME> <MIGRATION_NUMBER>
+  - `$ python manage.py sqlmigrate <APPNAME> <MIGRATION_NUMBER>`
     - Displays the SQL for a given app's given migration.
-  - $ python manage.py check
+  - `$ python manage.py check`
     - Checks for problems in your project without making any changes.
 
 ## Models
