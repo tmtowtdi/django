@@ -3,8 +3,8 @@
 # Tutorial
 https://docs.djangoproject.com/en/1.7/intro/tutorial01/
 
-## Left off at 
-https://docs.djangoproject.com/en/1.7/intro/tutorial02/#customizing-your-project-s-templates
+## Left off at
+https://docs.djangoproject.com/en/1.7/intro/tutorial03/
 
 # Install
 - `$ pip install django==1.7.4`
@@ -83,7 +83,7 @@ The following paths assume you used 'mysite' as the site name.
   - Edit this to tell the admin section app that this app should have an admin interface.
   - See polls/admin.py for eg
 
-### Models
+# Models
 After creating an app, you'll have <APPNAME>/models.py.  Add models to this as classes.  
 See polls/models.py as eg.
 
@@ -96,4 +96,17 @@ When you're happy with that, go ahead and run your new models' migrations:
 
 Any time you need to make changes to your models, re-run manage.py with first 
 `makemigrations`, and then `migrate`.
+
+# Templates
+- No templates directory gets created as part of the initial setup.  If you want custom 
+  templates, create a directory under your project directory) and add its name to 
+  `mysite/settings.py`.  I'll assume you're naming your directory "templates".
+  - `TEMPLATE_DIRS = [ os.path.join(BASE_DIR, 'templates')]`
+
+- To modify the look of the admin section:
+  - Create templates/admin/
+  - Copy the default template from the contributed admin app into your new admin/ 
+    directory.
+    - I found the admin app's templates here:
+      ~/work/python/virtualenvs/Django/lib/python3.4/site-packages/django/contrib/admin/templates/admin/
 

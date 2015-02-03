@@ -1,0 +1,9 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | Jon's Site Admin Title{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Jon's Site Admin</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
