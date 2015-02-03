@@ -53,7 +53,16 @@ docs/_build/
 # PyBuilder
 target/
 
-# Vim swap files
+### JDB
+###
+
+### Vim swap files
 *.swp
 *.swo
 
+### Don't check in databases
+*.sqlt
+*.sqlite
+*.sqlite3
+
+ # vim comments=:###\ 
