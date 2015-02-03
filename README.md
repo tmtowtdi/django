@@ -22,7 +22,7 @@ The following paths assume you used 'mysite' as the site name.
     - Yes, `mysite/mysite/`.
   - Contains a list of other Django applications that will be included in this one 
     (`INSTALLED_APPS`).  To initialize those apps, you'll need to use manage.py
-- mysite/manage.py
+- `mysite/manage.py` foo
   - Gets created automatically when you use django-admin.py to create a new project.
   - `$ python manage.py migrate`
     - Initializes the apps listed in settings.py, so you may want to edit that first 
